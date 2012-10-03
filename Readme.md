@@ -1,4 +1,4 @@
-= WebApp
+# WebApp
 
 This is just more experimenting creating a webapp entirely with JavaScript. On
 the frontend, I will be using Backbone and RequireJS to build a single page app.
