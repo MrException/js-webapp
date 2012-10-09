@@ -1,9 +1,21 @@
-describe('Todo Model', function() {
-    it('true is true', function() {
-        expect(true).toEqual(true);
-    });
+describe('Model :: Todo', function() {
 
-    it('false is false', function() {
-        expect(false).toEqual(false);
-    });
+  var mockData = {
+    title: 'Foo',
+    completed: false
+  };
+
+
+
+  it('true is true', function() {
+    expect(true).toEqual(true);
+  });
+
+  it('false is false', function() {
+    expect(false).toEqual(false);
+  });
+
+  it('false is false', function() {
+    expect(true).toEqual(false);
+  });
 });
