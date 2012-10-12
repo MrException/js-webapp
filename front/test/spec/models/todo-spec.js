@@ -5,8 +5,6 @@ describe('Model :: Todo', function() {
     completed: false
   };
 
-
-
   it('true is true', function() {
     expect(true).toEqual(true);
   });
