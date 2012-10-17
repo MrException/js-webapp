@@ -1,8 +1,8 @@
 define(["models/todo", "collections/todos", "sinon"], function(Todo, Todos, sinon) {
-  var that = this;
+  var that = {};
   that.Todo = Todo;
 
-  describe("Collection :: Todos", function() {
+  describe("Todos collection", function() {
 
     describe("basic functionality", function() {
       var todoStub;

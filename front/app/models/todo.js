@@ -1,14 +1,5 @@
-define([
-       'underscore',
-       'backbone',
-       'localstorage'
-], function(_, Backbone, Store) {
-
+define(['underscore', 'backbone'], function(_, Backbone, Store) {
   var Todo = Backbone.Model.extend({
-    url: "/todo",
-    //localStorage: new Store('todos-backbone'),
-    // Default attributes for the todo
-    // and ensure that each todo created has `title` and `completed` keys.
     defaults: {
       title: '',
       completed: false
