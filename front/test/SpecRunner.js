@@ -1,7 +1,6 @@
 // Require.js allows us to configure shortcut alias
 require.config({
-  // The shim config allows us to configure dependencies for
-  // scripts that do not call define() to register a module
+  baseUrl: "/app",
   shim: {
     'underscore': {
       exports: '_'
@@ -34,9 +33,9 @@ require.config({
     backbone: '../lib/backbone/backbone-0.9.2',
     text: '../lib/require/text-2.0.3',
     localstorage: '../lib/backbone/localstorage-1.0.0',
-    jasmine: 'lib/jasmine/jasmine-1.2.0',
-    'jasmine-html': 'lib/jasmine/jasmine-html-1.2.0',
-    sinon: 'lib/sinon/sinon-1.4.2'
+    jasmine: '../test/lib/jasmine/jasmine-1.2.0',
+    'jasmine-html': '../test/lib/jasmine/jasmine-html-1.2.0',
+    sinon: '../test/lib/sinon/sinon-1.4.2'
   }
 });
 
@@ -55,7 +54,8 @@ require(['underscore', 'jquery', 'jasmine-html', 'sinon'], function(_, $, jasmin
 
   var specs = [];
 
-  specs.push('spec/models/todo-spec');
+  specs.push('../test/spec/models/todo-spec');
+  specs.push('../test/spec/collections/todos-spec');
 
   $(function(){
     require(specs, function(){

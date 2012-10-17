@@ -6,11 +6,9 @@ define([
 ], function( _, Backbone, Store, Todo ) {
 
   var Todos = Backbone.Collection.extend({
-    // Reference to this collection's model.
     model: Todo,
 
-    // Save all of the todo items under the `"todos"` namespace.
-    localStorage: new Store('todos-backbone'),
+    url: '/todos',
 
     // Filter down the list of all todo items that are finished.
     completed: function() {
@@ -39,5 +37,5 @@ define([
     }
   });
 
-  return new Todos();
+  return Todos;
 });
